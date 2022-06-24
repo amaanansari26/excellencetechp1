@@ -38,7 +38,7 @@ app.use("/user",userRoutes)
 
 mongoose.connect(uri)
     .then(result => {
-        app.listen(80, () => {
+        http.listen(process.env.PORT || 80, () => {
             console.log('80isUP!')
         });
     })
